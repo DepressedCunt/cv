@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="cv.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo%7CPT+Sans" rel="stylesheet">
+<title>My CV</title>
+</head>
+<body>
+
+<h1>Template</h1>
+    <img src="avatar.jpg" alt="Avatar" class="avatar">
+    
+    <div class ="tab">
+        <button class="accordion">Dont Press Me</button>
+        <div class="panel">
+            <p>Profile</p>
+        </div>       
+    </div>
+    <style>
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.0s ease-out;
+}
+</style>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>

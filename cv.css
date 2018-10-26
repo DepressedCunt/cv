@@ -1,0 +1,53 @@
+    main {
+            width: 75%;
+            margin: auto;
+        }
+    h1 { 
+            text-align: right;
+            font-size: 2.5em;
+            font-family: 'PT Sans', sans-serif;
+ }
+CV {
+    text-align: right;
+    font-size: 1.2em;
+    
+}
+p {
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Arvo', serif;
+    text-align: right;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #fefefe;
+    color: #000;
+    cursor: pointer;
+    padding: 30px;
+    width: 10%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 1.0s;
+    font-size: 18px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #8d8d8d;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: show;
+    overflow: hidden;
+}
+.avatar {
+    vertical-align: left;
+    width: 102px;
+    height: 102px;
+    border-radius: 75%;
+}
