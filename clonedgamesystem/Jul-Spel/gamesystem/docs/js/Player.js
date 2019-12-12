@@ -30,14 +30,14 @@ class Player
         let movedX = pos.plus(new Vector(currentXSpeed * time, 0));
 
         if (!state.level.touches(movedX, this.size, groundTypes)) {
-            pos = movedX;
+            pos = movedX ;
         }
 
         let currentYSpeed = this.speed.y + time * gravity;
         let movedY = pos.plus(new Vector(0, currentYSpeed * time));
 
         if (!state.level.touches(movedY, this.size, groundTypes)) {
-            pos = movedY;
+            pos = movedY ;
         } else if ( (keys.ArrowUp || keys.KeyW) && currentYSpeed > 0) {
             if (currentYSpeed > 25) {
                 console.log("ouch cant dodge by uparrow"); // call on function for taking damage                

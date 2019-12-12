@@ -4,10 +4,10 @@ class MovingPlatform2
     {
         this.pos = pos;
         this.speed = speed;
-        this.size = new Vector(5, 1);
+        this.size = new Vector(3, 1);
         this.delta = delta;
-        this.xSpeed = 8;
-        this.ySpeed = 16
+        this.xSpeed = 16;
+        this.ySpeed = 8
         this.prevX = prevX;
         this.prevY = prevY;
     }
@@ -17,7 +17,7 @@ class MovingPlatform2
     }
     collide = function(state)
     {
-        return state
+        return new State(state.level, state.actors, "lost");
     }
     get type()
     { 
@@ -41,12 +41,12 @@ class MovingPlatform2
         if (!state.level.touches(movedX, this.size, ["clip2"])) {
             pos = movedX;
         } else {
-            currentXSpeed = -14;
+            currentYSpeed = -14;
         }
         if (!state.level.touches(movedX, this.size, ["clip","clip2"])) {
             pos = movedY;
         } else {
-            currentXSpeed = 14;
+            currentYSpeed = 14;
         }
         return new MovingPlatform2(pos, new Vector(currentXSpeed, currentYSpeed), this.delta, this.prevX, this.prevY);
     }
